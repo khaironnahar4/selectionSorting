@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sorting acending order</title>
+    <script>
+        let array=[23,12,45,1,3,90];
+       function selectionSort(array){
+        let point;
+        for(let i=0; i<array.length; i++){
+            point=i;
+            for(let j=i+1; j<array.length; j++){
+                if(array[j]<array[point]){
+                    point=j;
+                }
+            }
+            console.log(array[point])
+            let temp=array[i];
+            array[i]=array[point];
+            array[point]=temp;
+        }
+       }
+       selectionSort(array);
+       console.warn(array);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
